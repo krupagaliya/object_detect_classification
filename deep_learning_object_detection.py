@@ -1,9 +1,3 @@
-#currently we did object detection with combination of both SSD and MobileNet model
-#In next phase we will doing tracking by rendering input frames to 3D so there will be less chances to occur occultation.
-#For that we need high processing speed machine aka GPU  
-
-#python deep_learning_object_detection.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel --image example_14.jpg
-
 import numpy as np
 import argparse
 import cv2
@@ -51,10 +45,9 @@ print("[INFO] computing object detections...")
 net.setInput(blob)
 detections = net.forward()
 
-# loop over the detections
 for i in np.arange(0, detections.shape[2]):
-	# extract the confidence (i.e., probability) associated with the
-	# prediction
+	
+	
 	confidence = detections[0, 0, i, 2]
 
 	# filter out weak detections by ensuring the `confidence` is
