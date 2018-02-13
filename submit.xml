@@ -1,0 +1,17 @@
+<annotation>
+    <filename name="filename">example_14.jpg</filename>
+<size name="size">
+<width name="width">640 </width>
+<height name= "height">360 </height> 
+</size>
+    <object>
+        <bndbox>
+            <xmin name="xmin">260</xmin>
+            <ymin name="ymin">109</ymin>
+            <xmax name="xmax">330</xmax>
+            <ymax name="ymax">220</ymax>
+        </bndbox>
+    </object>
+</annotation>
+    
+
