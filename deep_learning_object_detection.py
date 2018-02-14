@@ -87,18 +87,18 @@ File_name= sys.argv[6]
 #XML file generation
 root = ET.Element("annotation")
 
-ET.SubElement(root, "filename", name="filename").text = File_name
+ET.SubElement(root, "filename", name="filename").text = str(File_name)
 
 size = ET.SubElement(root, "size", name="size")
-ET.SubElement(size, "width", name="width").text = w
-ET.SubElement(size, "height", name="height").text = h
+ET.SubElement(size, "width", name="width").text = str(w)
+ET.SubElement(size, "height", name="height").text = str(h)
 
 object1 = ET.SubElement(root, "object", name="object")
 box = ET.SubElement(object1, "bndbox", name="bndbox")
-ET.SubElement(box, "xmin", name="xmin").text = startX
-ET.SubElement(box, "ymin", name="ymin").text = startY
-ET.SubElement(box, "xmax", name="xmax").text = endX
-ET.SubElement(box, "ymax", name="ymax").text = endY
+ET.SubElement(box, "xmin", name="xmin").text = str(startX)
+ET.SubElement(box, "ymin", name="ymin").text = str(startY)
+ET.SubElement(box, "xmax", name="xmax").text = str(endX)
+ET.SubElement(box, "ymax", name="ymax").text = str(endY)
 
 tree = ET.ElementTree(root)
 print(tree)
